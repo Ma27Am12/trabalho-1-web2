@@ -26,6 +26,28 @@
             <p>Turma: 4° Período</p>
             <p>Este site foi desenvolvido como atividade prática da disciplina de programação web II.</p>
         </section>
+        <section id="sessão">
+            <h2>Informações da Sessão</h2>
+            <p>
+                <?php 
+                session_start();
+
+                if(!isset($_SESSION['acessos'])) {
+                    $_SESSION['acessos'] = 0;
+                }
+
+                $_SESSION['acessos']++;
+
+                $metodo = $_SERVER['REQUEST_METHOD'];
+
+                $servidor = $_SERVER['SERVER_NAME'];
+
+                echo "Número de acessos nesta sessão: " . $_SESSION['acessos'] . "<br>";
+                echo "Método de requisição: " . $metodo . "<br>";
+                echo "Servidor: " . $servidor;
+                ?>
+            </p>
+        </section>
     </main>
 </body>
 </html>
