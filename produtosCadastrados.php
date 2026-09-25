@@ -1,23 +1,29 @@
 <?php 
+session_start();
+
+// Caminho do arquivo
+$arquivo = "dados/produtos.txt";
+
+// Captura pesquisa (se houver)
 $pesquisa = isset($_GET['pesquisar']) ? trim($_GET['pesquisar']) : "";
 $produtos = [];
 
-
-if(file_exists($arquivo)) {
+if (file_exists($arquivo)) {
     $linhas = file($arquivo);
 
-    foreach($linhas as $linha) {
+    foreach ($linhas as $linha) {
         $partes = explode("|", $linha);
         $produto = [];
 
-        foreach($partes as $parte) {
+        foreach ($partes as $parte) {
             list($chave, $valor) = explode(":", $parte);
             $produto[trim($chave)] = trim($valor);
         }
 
-        if($pesquisa === "" || stripos($produto['nome'], $pesquisa) !== FALSE|| stripos($produto['Categoria'], $pesquisa) !== false) {
+        if ($pesquisa !== "" && (stripos($produto['Nome'], $pesquisa) !== false ||stripos($produto['Categoria'], $pesquisa) !== false)) {
             $produtos[] = $produto;
-        } 
+        }
+
     }
 }
 ?>
@@ -28,7 +34,28 @@ if(file_exists($arquivo)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Produtos Cadastrados</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -45,26 +72,15 @@ if(file_exists($arquivo)) {
             <p>Confira todos os produtos cadastrados</p>
         </section>
         <section id="pesquisa">
-            <input type="text" name="pesquisar" required placeholder="Pesquisar produto...">
+            <form method="get" action="produtosCadastrados.php">
+                <input type="text" name="pesquisar" placeholder="Pesquisar produto..." value="<?php echo htmlspecialchars($pesquisa); ?>">
+                <button type="submit">Pesquisar</button>
         </section>
         <section>
             <div class="container">
                 <?php 
-                $arquivo = "dados/produtos.txt";
-
-                if(file_exists($arquivo)) {
-                    $linhas = file($arquivo);
-
-                    foreach($linhas as $linha) {
-                        $partes = explode("|", $linha);
-                        
-                        $produto = [];
-
-                        foreach($partes as $parte) {
-                            list($chave, $valor) = explode(":", $parte);
-                            $produto[trim($chave)] = trim($valor);
-                        }
-
+                if (count($produtos) > 0) {
+                    foreach ($produtos as $produto) {
                         echo "<div class='card'>";
                         echo "<img src='{$produto['Imagem']}' alt='Imagem do produto'>";
                         echo "<h2>{$produto['Nome']}</h2>";
@@ -74,9 +90,7 @@ if(file_exists($arquivo)) {
                         echo "<p><strong>Quantidade disponível:</strong> {$produto['Quantidade']}</p>";
                         echo "</div>";
                     }
-                } else {
-                    echo "<p>Nenhum produto cadastrado ainda. <\p>";
-                }
+                } 
                 ?>
             </div>
         </section>

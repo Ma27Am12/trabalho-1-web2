@@ -1,0 +1,3 @@
+Nome: Goiaba | Descrição: Goiaba direto da fazenda | Preço: 8 | Categoria: Goiaba | Quantidade: 1 | Imagem: imagens/6ab6c3c85acfc_pngwing.com.png
+Nome: Pêra | Descrição: Pêra direto da fazenda | Preço: 10 | Categoria: Pera | Quantidade: 1 | Imagem: imagens/6ab6c43795674_pera.png
+Nome: banana | Descrição: Banana direto da Fazenda | Preço: 12 | Categoria: Banana | Quantidade: 1 | Imagem: imagens/6ab6c467e09b5_banana.png

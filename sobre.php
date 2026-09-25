@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sobre</title>
 </head>
 <body>
     <header>
@@ -30,7 +31,6 @@
             <h2>Informações da Sessão</h2>
             <p>
                 <?php 
-                session_start();
 
                 if(!isset($_SESSION['acessos'])) {
                     $_SESSION['acessos'] = 0;

@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao = trim($_POST['descricao']);
     $preco = floatval($_POST['preco']);
     $quantidade = intval($_POST['quantidade']); 
+    $categoria = trim($_POST['categoria']);
 
     $dirImagens = "imagens/";
 
@@ -24,9 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "<p> Erro ao salvar a imagem do produto.</p>";
     }
-} else {
-    echo "<p> Método inválido. Use POST.</p>";
-}
+} 
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cadastro De Produto</title>
 </head>
 <body>
@@ -51,28 +51,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Preencha os dados abaixo para adicionar um novo produto</p>
         </section>
         <section id="formulário">
-            <form action="produtosCadastrados.php" method="post" enctype="multipart/form-data">
+            <form action="cadastroDeProduto.php" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome do produto:</label>
+                <br>
                 <input type="text" id="nome" name="nome" required>
-
+                <br>
                 <label for="categoria">Categoria:</label>
+                <br>
                 <select name="categoria" id="categoria" required>
                     <option value="">Selecione</option>
                     <option value="Goiaba">Goiaba</option>
-                    <option value="Maça">Maça</option>
-                    <option value="Pera">Pera</option>
+                    <option value="Pera">Pêra</option>
                     <option value="Banana">Banana</option>
                 </select>
-
+                <br>
+                <label for="preco">Preço:</label>
+                <br>
+                <input type="number" id="preco" name="preco" step="0.01" required>
+                <br>
                 <label for="quantidade">Quantidade:</label>
+                <br>
                 <input type="number" id="quantidade" name="quantidade" required>
-
-                <label for="descricao">Descrição</label>
+                <br>
+                <label for="descricao">Descrição:</label>
+                <br>
                 <textarea name="descricao" id="descricao" rows="4"></textarea>
-
+                <br>
                 <label for="imagem">Imagem do Produto:</label>
+                <br>
                 <input type="file" id="imagem" name="imagem" accept="image/*">
-
+                <br>
                 <button type="submit">Cadastrar Produto</button>
             </form>
         </section>
