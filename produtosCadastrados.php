@@ -23,7 +23,6 @@ if (file_exists($arquivo)) {
         if ($pesquisa !== "" && (stripos($produto['Nome'], $pesquisa) !== false ||stripos($produto['Categoria'], $pesquisa) !== false)) {
             $produtos[] = $produto;
         }
-
     }
 }
 ?>
@@ -36,26 +35,6 @@ if (file_exists($arquivo)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Produtos Cadastrados</title>
-    <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 250px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-        }
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
