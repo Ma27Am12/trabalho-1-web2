@@ -1,3 +1,9 @@
-Nome: Goiaba | Descrição: Goiaba direto da fazenda | Preço: 8 | Categoria: Goiaba | Quantidade: 1 | Imagem: imagens/6ab6c3c85acfc_pngwing.com.png
-Nome: Pêra | Descrição: Pêra direto da fazenda | Preço: 10 | Categoria: Pera | Quantidade: 1 | Imagem: imagens/6ab6c43795674_pera.png
-Nome: banana | Descrição: Banana direto da Fazenda | Preço: 12 | Categoria: Banana | Quantidade: 1 | Imagem: imagens/6ab6c467e09b5_banana.png
+Nome: Goiaba | Descrição: Goiaba direto da fazenda | Preço: 8 | Categoria: fruta | Quantidade: 1 | Imagem: imagens/6ab80ef1f0254_goiaba.png
+Nome: Pêra | Descrição: Pêra direto da fazenda | Preço: 10 | Categoria: fruta | Quantidade: 1 | Imagem: imagens/6ab8115705651_pera.png
+Nome: Banana | Descrição: Banana direto da fazenda | Preço: 12 | Categoria: fruta | Quantidade: 1 | Imagem: imagens/6ab8118c413a2_banana.png
+Nome: Alface | Descrição: Alface direto da fazenda | Preço: 10 | Categoria: Verdura | Quantidade: 1 | Imagem: imagens/6ab811b06de44_alface.png
+Nome: Couve | Descrição: Couve direto da fazenda | Preço: 8 | Categoria: Verdura | Quantidade: 1 | Imagem: imagens/6ab811d10e4d7_couve.png
+Nome: Espinafre | Descrição: Espinafre direto da fazenda | Preço: 11 | Categoria: Verdura | Quantidade: 1 | Imagem: imagens/6ab811ecb2c18_espinafre.png
+Nome: Cenoura | Descrição: Cenoura direto da fazenda | Preço: 7.5 | Categoria: Legume | Quantidade: 1 | Imagem: imagens/6ab812093210b_cenoura.png
+Nome: Batata | Descrição: Batata direto da fazenda | Preço: 6.25 | Categoria: Legume | Quantidade: 1 | Imagem: imagens/6ab81224813b1_batata.png
+Nome: Beterraba | Descrição: Beterraba direto da fazenda | Preço: 7 | Categoria: Legume | Quantidade: 1 | Imagem: imagens/6ab8125c84192_beterraba.png

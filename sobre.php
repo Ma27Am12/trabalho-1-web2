@@ -21,7 +21,7 @@
             <p>informações sobre o desenvolvedor do projeto</p>
         </section>
         <section id="aluno">
-            <h2>Nome do Aluno</h2>
+            <h2>Matheus Amaral Mariano</h2>
             <p>Matricula: 00000</p>
             <p>Curso: Ciência da Computação</p>
             <p>Turma: 4° Período</p>

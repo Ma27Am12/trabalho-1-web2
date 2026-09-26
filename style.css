@@ -56,7 +56,8 @@ main {
 
 #mensagem {
     background-color: white;
-    padding: 20px;
+    padding-top: 40px;
+    padding-left: 25px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     width: 1000px;
@@ -146,7 +147,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-left: 240px;
+    margin-left: 23.2%;
 }
 
 .card {
@@ -155,7 +156,7 @@ main {
     border-radius: 8px;
     width: 250px;
     padding: 15px;
-    text-align: center;
+    text-align: left;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -163,4 +164,26 @@ main {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+#aluno {
+   background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 1000px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 30px; 
+}
+
+#sessão {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 1000px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 30px;
 }

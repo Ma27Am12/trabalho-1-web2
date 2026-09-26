@@ -18,12 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
        $arquivo = "dados/produtos.txt";
        if (file_put_contents($arquivo, $linha,  FILE_APPEND)) {
-            echo "<p> Produto cadastrado com sucesso! </p>";
+            echo "<script>alert('Produto cadastrado com sucesso!');</script>";
        } else {
-            echo "<p> Erro ao salvar os dados no arquivo TXT.</p>";
+            echo "<script>alert('Erro ao salvar os dados no arquivo TXT.');</script>";
        }
     } else {
-        echo "<p> Erro ao salvar a imagem do produto.</p>";
+        echo "<script>alert('Erro ao salvar a imagem do produto.');</script>";
     }
 } 
 ?>
@@ -60,9 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <br>
                 <select name="categoria" id="categoria" required>
                     <option value="">Selecione</option>
-                    <option value="Goiaba">Goiaba</option>
-                    <option value="Pera">Pêra</option>
-                    <option value="Banana">Banana</option>
+                    <option value="fruta">Fruta</option>
+                    <option value="Verdura">Verdura</option>
+                    <option value="Legume">Legume</option>
                 </select>
                 <br>
                 <label for="preco">Preço:</label>
